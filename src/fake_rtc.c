@@ -32,7 +32,7 @@ void FakeRtc_TickTimeForward(void)
     if (FlagGet(OW_FLAG_PAUSE_TIME))
         return;
 
-    FakeRtc_AdvanceTimeBy(0, 0, 10);
+    FakeRtc_AdvanceTimeBy(0, 0, 1);
 }
 
 void FakeRtc_AdvanceTimeBy(u32 hours, u32 minutes, u32 seconds)
