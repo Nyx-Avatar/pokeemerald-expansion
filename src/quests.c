@@ -2190,7 +2190,7 @@ static void QuestMenu_CreateSprite(u16 itemId, u8 idx, u8 spriteType)
 				break;
 			case PKMN:
 				LoadMonIconPalettes();
-				spriteId = CreateMonIcon(itemId, SpriteCallbackDummy, 20, 132, 0, 1, 1);
+				spriteId = CreateMonIcon(itemId, SpriteCallbackDummy, 20, 132, 0, 1);   // originally spriteId = CreateMonIcon(itemId, SpriteCallbackDummy, 20, 132, 0, 1, 1); but we got a Make Error that it was one argument too long. Trial 1 is dropping the last 1.
 				break;
 			default:
 				break;
