@@ -2472,10 +2472,15 @@ bool8 ScrCmd_warpwhitefade(struct ScriptContext *ctx)
 void ScriptSetDoubleBattleFlag(struct ScriptContext *ctx)
 {
     sIsScriptedWildDouble = TRUE;
+}
+
+// Quest Menu addition
+
 bool8 ScrCmd_questmenu(struct ScriptContext *ctx)
 {
     u8 caseId = ScriptReadByte(ctx);
     u8 questId = VarGet(ScriptReadByte(ctx));
+
 
     switch (caseId)
     {
