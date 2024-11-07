@@ -79,14 +79,12 @@ void FakeRtc_ManuallySetTime(u32 hour, u32 minute, u32 second)
     FakeRtc_AdvanceTimeBy(diff.hours, diff.minutes, diff.seconds);
 }
 
-// Commenting Out to test RTC speeds change
-// 
-// u32 FakeRtc_GetSecondsRatio(void)
-// {
-//     return (OW_ALTERED_TIME_RATIO == GEN_8_PLA) ? 60 :
-//            (OW_ALTERED_TIME_RATIO == GEN_9)     ? 20 :
-//                                                   1;
-// }
+u32 FakeRtc_GetSecondsRatio(void)
+{
+    return (OW_ALTERED_TIME_RATIO == GEN_8_PLA) ? 60 :
+           (OW_ALTERED_TIME_RATIO == GEN_9)     ? 20 :
+                                                  1;
+}
 
 STATIC_ASSERT((OW_FLAG_PAUSE_TIME == 0 || OW_USE_FAKE_RTC == TRUE), FakeRtcMustBeTrueToPauseTime);
 
